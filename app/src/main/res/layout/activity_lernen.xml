@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_lernen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="dominicpfeifer.srl.Lernen">
+
+    <Button
+        android:text="1er Reihe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="135dp"
+        android:id="@+id/btn_1er" />
+
+    <Button
+        android:text="2er reihe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_2er"
+        android:layout_alignBaseline="@+id/btn_1er"
+        android:layout_alignBottom="@+id/btn_1er"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="3er Reihe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btn_2er"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="13dp"
+        android:id="@+id/btn_3er" />
+
+    <Button
+        android:text="4er Reihe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_1er"
+        android:layout_alignStart="@+id/btn_1er"
+        android:layout_marginTop="53dp"
+        android:id="@+id/btn_4er" />
+
+    <Button
+        android:text="5er Reihe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btn_4er"
+        android:layout_alignEnd="@+id/btn_2er"
+        android:id="@+id/btn_5er" />
+
+    <Button
+        android:text="6er Reihe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btn_5er"
+        android:layout_alignEnd="@+id/btn_3er"
+        android:id="@+id/btn_6er" />
+
+    <Button
+        android:text="7er Reihe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_4er"
+        android:layout_alignStart="@+id/btn_4er"
+        android:layout_marginTop="57dp"
+        android:id="@+id/btn_7er" />
+
+    <Button
+        android:text="8er Reihe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_8er"
+        android:layout_alignBaseline="@+id/btn_7er"
+        android:layout_alignBottom="@+id/btn_7er"
+        android:layout_alignStart="@+id/btn_2er" />
+
+    <Button
+        android:text="9er Reihe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_9er"
+        android:layout_alignBaseline="@+id/btn_8er"
+        android:layout_alignBottom="@+id/btn_8er"
+        android:layout_alignStart="@+id/btn_6er" />
+</RelativeLayout>
