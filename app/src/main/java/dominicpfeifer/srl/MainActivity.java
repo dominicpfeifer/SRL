@@ -2,6 +2,7 @@ package dominicpfeifer.srl;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.util.Log;
@@ -14,6 +15,8 @@ import java.util.Locale;
 import java.util.Random;
 import android.os.Vibrator;
 
+import org.w3c.dom.Text;
+
 
 public class MainActivity extends Activity  implements
         TextToSpeech.OnInitListener{
@@ -24,7 +27,13 @@ public class MainActivity extends Activity  implements
     private TextView txtZahl1;
     private TextView txtZahl2;
     private EditText editTextErgebnis;
+    private TextView txtPunkte;
+    private TextView txtLeben;
+    private TextView txtMulti;
     private Vibrator v;
+    private int points = 0;
+    private int multiplikator = 0;
+    private int leben = 2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +53,14 @@ public class MainActivity extends Activity  implements
             }
 
         });
+
+        txtLeben = (TextView) findViewById(R.id.txtLeben);
+        txtPunkte = (TextView) findViewById(R.id.txtPunkte);
+        txtMulti = (TextView) findViewById(R.id.txtMulti);
+
+        txtLeben.setText("Leben: " + leben);
+        txtPunkte.setText("Punkte: " + points);
+        txtMulti.setText("Multiplikator: " + multiplikator);
 
 
         btnCheck = (Button)findViewById(R.id.btnCheck);
@@ -82,15 +99,35 @@ public class MainActivity extends Activity  implements
 
         String text;
         long[] pattern = {0, 400, 200, 400, 200, 400 };
+        long[] pattern2 = {0,100,100,100};
 
         if(check == ergebnis){
             text = "YES";
+            points++;
+            multiplikator++;
+            if(points > 1){
+                points = points * multiplikator;
+            }
+            txtPunkte.setText("Punkte: " + points);
+            txtMulti.setText("Multiplikator: " + multiplikator);
+            editTextErgebnis.setText("");
+            calculate();
         }else{
             text = "NO";
-            v.vibrate(pattern, -1);
+            leben--;
+            txtLeben.setText("Leben: " + leben);
+            v.vibrate(pattern2, -1);
+            editTextErgebnis.setText("");
+            if(leben == 0){
+                v.vibrate(pattern, -1);
+                Intent intent = new Intent(MainActivity.this,Highscore.class);
+                intent.putExtra("highscore",points);
+                startActivity(intent);
+                //neue activity mit highscore
+            }
         }
 
-        Log.e("TTS", text + "in check");
+        Log.e("TTS", text + " Punkte: " + points + " Leben: " + leben);
     }
 
 
