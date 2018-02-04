@@ -89,4 +89,13 @@
         android:layout_alignBaseline="@+id/btn_8er"
         android:layout_alignBottom="@+id/btn_8er"
         android:layout_alignStart="@+id/btn_6er" />
+
+    <Button
+        android:text="Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/btn_8er"
+        android:layout_marginBottom="13dp"
+        android:id="@+id/btn_10er" />
 </RelativeLayout>
