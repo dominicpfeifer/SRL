@@ -184,7 +184,6 @@ public class MainActivity extends Activity  implements
         Log.e("TTS", "in speak!");
         tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
 
-
     }
 
 

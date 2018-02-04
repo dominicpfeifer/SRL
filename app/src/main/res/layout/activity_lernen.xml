@@ -91,7 +91,7 @@
         android:layout_alignStart="@+id/btn_6er" />
 
     <Button
-        android:text="Button"
+        android:text="10er Reihe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
