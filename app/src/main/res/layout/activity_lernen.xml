@@ -98,5 +98,12 @@
         android:id="@+id/btn_10er"
         android:layout_below="@+id/btn_8er"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp" />
+        android:layout_marginTop="50dp" 
+        android:text="10er Reihe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/btn_8er"
+        android:layout_marginBottom="13dp"
+        android:id="@+id/btn_10er" />
 </RelativeLayout>
