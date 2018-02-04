@@ -16,6 +16,7 @@ public class Lernen extends AppCompatActivity {
     private Button btn_7er;
     private Button btn_8er;
     private Button btn_9er;
+    private Button btn_10er;
 
     private void reset() {
 
@@ -34,63 +35,98 @@ public class Lernen extends AppCompatActivity {
         btn_7er = (Button) findViewById(R.id.btn_7er);
         btn_8er = (Button) findViewById(R.id.btn_8er);
         btn_9er = (Button) findViewById(R.id.btn_9er);
+        btn_10er = (Button) findViewById(R.id.btn_10er);
         final Intent i = new Intent(Lernen.this, Lernen_reihen.class);
-        String strName = null;
-        i.putExtra("STRING_I_NEED", strName);
+
 
         btn_1er.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 i.putExtra("reihe", "1");
+                String reihe = "1";
+                i.putExtra("reihe", reihe);
                 startActivity(i);
             }
         });
         btn_2er.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                i.putExtra("reihe", "2");
+                String reihe = "2";
+                i.putExtra("reihe", reihe);
+                startActivity(i);
             }
         });
         btn_3er.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                i.putExtra("reihe", "3");
+                String reihe = "3";
+                i.putExtra("reihe", reihe);
+                startActivity(i);
             }
         });
         btn_4er.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                i.putExtra("reihe", "4");
+                String reihe = "4";
+                i.putExtra("reihe", reihe);
+                startActivity(i);
             }
         });
         btn_5er.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                i.putExtra("reihe", "5");
+                String reihe = "5";
+                i.putExtra("reihe", reihe);
+                startActivity(i);
             }
         });
         btn_6er.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                i.putExtra("reihe", "6");
+                String reihe = "6";
+                i.putExtra("reihe", reihe);
+                startActivity(i);
             }
         });
         btn_7er.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                i.putExtra("reihe", "7");
+                String reihe = "7";
+                i.putExtra("reihe", reihe);
+                startActivity(i);
             }
         });
         btn_8er.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                i.putExtra("reihe", "8");
+                String reihe = "8";
+                i.putExtra("reihe", reihe);
+                startActivity(i);
             }
         });
         btn_9er.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                i.putExtra("reihe", "9");
+                String reihe = "9";
+                i.putExtra("reihe", reihe);
+                startActivity(i);
+            }
+        });
+        btn_10er.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                i.putExtra("reihe", "10");
+                String reihe = "10";
+                i.putExtra("reihe", reihe);
+                startActivity(i);
             }
         });
     }
