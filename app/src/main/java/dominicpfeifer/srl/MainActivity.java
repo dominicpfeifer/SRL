@@ -44,7 +44,9 @@ public class MainActivity extends Activity  implements
         tts = new TextToSpeech(this, this);
         Log.e("TTS", "in onCreate!");
         btnSpeak = (Button) findViewById(R.id.btnSpeak);
-        btnSpeak.setText("Vorlesen");
+        //btnSpeak.setText("Vorlesen");
+        // Ich habe das auskommentiert, da dieser Textview durch ein .png ersetzt wurde @raakulan
+
         // button on click event
         btnSpeak.setOnClickListener(new View.OnClickListener() {
 
@@ -65,7 +67,8 @@ public class MainActivity extends Activity  implements
 
 
         btnCheck = (Button)findViewById(R.id.btnCheck);
-        btnCheck.setText("Lösen");
+        //btnCheck.setText("Lösen");
+        //siehe zeile 48!
         btnCheck.setOnClickListener(new View.OnClickListener() {
 
             @Override
