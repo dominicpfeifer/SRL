@@ -14,6 +14,7 @@ import android.widget.TextView;
 import java.util.Locale;
 import java.util.Random;
 import android.os.Vibrator;
+import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
@@ -115,6 +116,7 @@ public class MainActivity extends Activity  implements
         }else{
             text = "NO";
             leben--;
+            multiplikator = 0;
             txtLeben.setText("Leben: " + leben);
             v.vibrate(pattern2, -1);
             editTextErgebnis.setText("");
@@ -124,6 +126,13 @@ public class MainActivity extends Activity  implements
                 intent.putExtra("highscore",points);
                 startActivity(intent);
                 //neue activity mit highscore
+            }else{
+                Context context = getApplicationContext();
+                CharSequence text1 = "FALSCH! du hast noch 1 Versuch";
+                int duration = Toast.LENGTH_LONG;
+
+                Toast toast = Toast.makeText(context, text1, duration);
+                toast.show();
             }
         }
 
